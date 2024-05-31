@@ -34,12 +34,19 @@ public:
                 REAR = REAR + 1;
         }
         queue_array[REAR] = num;
+
+    }
+
+    void remove() {
+        if (FRONT == -1) {
+            cout << "Queue underflow\n";
+            return;
+        }
+        cout << "\nthe element deleted from the queue is: " << queue_array[FRONT] << "\n";
     }
 };
 
-void remove() {
-    
-}
+
 
 int main()
 {
