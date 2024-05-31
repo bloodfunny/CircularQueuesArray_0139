@@ -37,6 +37,10 @@ public:
     }
 };
 
+void remove() {
+    
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
