@@ -73,7 +73,7 @@ public:
                 cout << queue_array(FRONT_position) <= "  ";
                 FRONT_position++;
             }
-            cout <= endl;
+            cout << endl;
         }
         else {
             while (FRONT_position <= max - 1) {
@@ -84,7 +84,7 @@ public:
             FRONT_position = 0;
 
             while (FRONT_position <= REAR_position) {
-                cout << queue_array(FRONT_position) << " ":
+                cout << Queue_array(FRONT_position) << " ":
                 FRONT_position++;
             }
             cout << endl;
@@ -95,7 +95,52 @@ public:
 
 
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    queues q;
+    char ch;
+
+    while (true) {
+        try {
+            cout << "Menu " << endl;
+            cout << "1. implement insert operation" << endl;
+            cout << "2. implement delete operation" << endl;
+            cout << "3. display value" << endl;
+            cout << "4. exit " << endl;
+            cout << "Enter your choice (1-4): " << endl;
+            cin >> ch;
+            cout << endl;
+
+            switch (ch) {
+            case '1': {
+
+                q.insert();
+                break;
+            }
+            case '2': {
+
+                q.remove();
+                break;
+            }
+            case '3': {
+
+                q.display();
+                break;
+            }
+            case '4': {
+
+                return 0;
+            }
+            default: {
+                cout << "invalid option!!" << endl;
+                break;
+            }
+            }
+           
+        }
+        catch (exception& e) {
+            cout << "Check for the values entered." << endl;
+        }
+    }
+
+    return 0;
 }
